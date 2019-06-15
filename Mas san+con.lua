@@ -35,7 +35,12 @@ if Self.CanCastSpell(spell.words) then
 if Self.Mana() > spell.mana and targets >= spell.targets then
 Self.Say(spell.words)
 wait(200,600)
-else local curTargetID = Self.TargetID()
+end
+end
+end
+end
+end
+local curTargetID = Self.TargetID()
         if( curTargetID ~= 0 ) then
             local enemyPos = Creature.New(curTargetID):Position()
             local manaPercent = math.floor(( Self.Mana() * 100 ) / Self.MaxMana())
@@ -49,10 +54,5 @@ else local curTargetID = Self.TargetID()
                 end
             end
         end
-end
-end 
-end
-end
-end
 wait(400, 600)
 end
